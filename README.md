@@ -21,7 +21,7 @@ flask run
    Accediendo a la URL [http://127.0.0.1:5000/](http://127.0.0.1:5000/), se muestra la lista de heladerías almacenadas en la base de datos (por defecto, habrá una heladería).
 
 3. **Menú de la Heladería:**
-   En la página de lista de heladerías, al seleccionar una heladería (por ejemplo, con ID `1`), el sistema redirige a [http://127.0.0.1:5000/parlor/1](http://127.0.0.1:5000/parlor/1), donde se muestra el menú de productos disponibles de esa heladería.
+   En la página de lista de heladerías, al seleccionar una heladería (por ejemplo, con ID `1`), el sistema redirige a la página de inicio de sesión. Se puede crear un usuario con el botón de registrarse. Después de eso, redirigirá nuevamente al inicio de sesión donde se puede ingresar con el usuario recien creado. Aparecerá entonces la página con el menú de laHeladería
 
 4. **Compra de Productos:**
    Al hacer clic en cualquier producto del menú, se realiza la compra de ese producto. La acción se ejecuta a través de la URL [http://127.0.0.1:5000/parlor/1/makeSale/Copa%20Vainilla](http://127.0.0.1:5000/parlor/1/makeSale/Copa%20Vainilla), y se muestra un mensaje de confirmación en la parte superior de la página.
@@ -118,4 +118,5 @@ La aplicación se desplegó a través de Vercel con el siguiente endpoint:
 
 proyectofinal-sdaza1.vercel.app
 
-Sobre este endpoint se pueden construir todas las peticiones de la Documentación de la API
+Sobre este endpoint se pueden construir todas las peticiones de la Documentación de la API.
+Además fue ejecutada una integración con un a base de datos de Postgres con Neon.
