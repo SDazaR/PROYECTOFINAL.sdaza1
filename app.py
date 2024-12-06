@@ -43,8 +43,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app=app)
 
-init_db(app) # Si no se tiene una base de datos con los objetos, se debe descomentar esto y correr la aplicación
-fill_db(app, db)
+# init_db(app) # Si no se tiene una base de datos con los objetos, se debe descomentar esto y correr la aplicación
+# fill_db(app, db)
 
 if __name__ == '__main__':
     app.run(debug=True)
