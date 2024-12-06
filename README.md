@@ -114,4 +114,8 @@ Los controladores de Producto e Ingrediente fueron añadidos con las funciones p
 
 ## Despliegue
 
-La aplicación se desplegó a través de Vercel con los siguientes endpoints
+La aplicación se desplegó a través de Vercel con el siguiente endpoint:
+
+proyectofinal-sdaza1.vercel.app
+
+Sobre este endpoint se pueden construir todas las peticiones de la Documentación de la API
