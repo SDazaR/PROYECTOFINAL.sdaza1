@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de la Heladería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .header-title {
+            margin: 0;
+        }
+        .mejor-producto-btn {
+            background-color: white;
+            color: #ff6f61;
+            border: 2px solid #ff6f61;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .mejor-producto-btn:hover {
+            background-color: #ff6f61;
+            color: white;
+        }
+        .resp {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            max-width: 300px;
+            text-align: right;
+        }
+        .container {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 1rem;
+        }
+        .producto {
+            background-color: white;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .producto h3 {
+            margin: 0;
+            color: #ff6f61;
+        }
+        .producto p {
+            margin: 0.5rem 0;
+            color: #333;
+        }
+        .producto .precio {
+            font-weight: bold;
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">{{parlor_name}}</h1>
+        <div class="resp">{{ resp }}</div>
+        <a href="/parlor/{{ iden }}/bestProduct" class="mejor-producto-btn">Mejor Producto</a>
+    </header>
+    <div class="container">
+        {% for item in menu %}
+        <div class="producto">
+            <a href="/parlor/{{ iden }}/makeSale/{{item.name}}" class="button">{{ item.name }}</a>
+            <p>Ingredientes: {{ item.ingredients | map(attribute='name') | join(', ') }}</p>
+            <p class="precio">Precio: {{ item.sale_price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

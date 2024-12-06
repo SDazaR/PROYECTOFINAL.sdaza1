@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #ff4a3b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos</h1>
+    </header>
+    <div class="container">
+        
+    </div>
+    <div class="container">
+        {% for item in parlors %}
+        <div class="producto">
+            <a href="/auth/parlor/{{ item.id }}" class="button">{{ item.name }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
