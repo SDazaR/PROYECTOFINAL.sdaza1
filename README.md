@@ -1,6 +1,6 @@
 # PROYECTO FINAL - Heladería
 
-Este repositorio corresponde al segundo proyecto del curso de Backend con Python, impartido por la Universidad de los Andes en el semestre 2024-2.
+Este repositorio corresponde al proyecto final del curso de Backend con Python, impartido por la Universidad de los Andes en el semestre 2024-2.
 
 ## Descripción general
 Este proyecto implementa una aplicación web de gestión para una heladería utilizando Flask. El sistema permite manejar la creación de heladerías, sus productos y la venta de estos productos.
