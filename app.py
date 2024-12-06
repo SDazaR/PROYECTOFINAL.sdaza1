@@ -37,9 +37,10 @@ def index():
     return render_template("welcome.html", parlors=parlors)
 
 # app.config["SQLALCHEMY_DATABASE_URI"] = f'mysql+pymysql://{os.getenv("DB_USER_NAME")}:{quote_plus(os.getenv("DB_PASSWORD"))}@{os.getenv("DB_HOST")}:{os.getenv("DB_PORT")}/{os.getenv("DB_NAME")}'
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/project.db"
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/project.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = f'postgresql://{os.getenv("POSTGRES_USER")}:{quote_plus(os.getenv("POSTGRES_PASSWORD"))}@{os.getenv("POSTGRES_HOST")}/{os.getenv("POSTGRES_DATABASE")}'
 
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app=app)
 
